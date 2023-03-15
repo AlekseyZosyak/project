@@ -14,8 +14,7 @@ function start() {
     while (numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)) {
         numberOfFilm = prompt('Сколько фильмов вы посмотрели?', '');
     }
-}
-   
+} 
 start();
 
 function question() {
@@ -43,7 +42,6 @@ function question() {
         }
     }
 }
-
 question();
  
 function add() {
@@ -56,8 +54,26 @@ function add() {
     }
     
 }
+add();
 
-console.log(personalMuvieDB)
+// function showMyDB() {
+//     personalMuvieDB.privat != true ? console.log('Главный обьект программы') : console.log('true');
+// }
+function showMyDB(hidden) {
+    (!hidden) ? console.log('Главный обьект программы') : console.log('true');
+    console.log(personalMuvieDB);
+}
+
+showMyDB(personalMuvieDB.privat);
+
+function writeYourGenres() {
+    for (let i = 0; i <= 2; i++) {
+       personalMuvieDB.genres[i] = prompt(`ваш любимый жанр под номером : ${i + 1}.`);
+    }
+}
+writeYourGenres();
+
+
 
 
 
