@@ -9,7 +9,7 @@ const personalMuvieDB = {
 };
 
 function start() {
-    numberOfFilm = prompt('Сколько фильмов вы посмотрели?', '');
+    numberOfFilm = prompt('Сколько фильмов вы посмотрели?', '').trim();
 
     while (numberOfFilm == '' || numberOfFilm == null || isNaN(numberOfFilm)) {
         numberOfFilm = prompt('Сколько фильмов вы посмотрели?', '');
@@ -24,8 +24,8 @@ function question() {
 
     restart:
     for (let i = 0; i < 2; i++) {
-        lastWachhFilm = prompt('Один из последних фильмов?', '');
-        gradeFilm = prompt('Насколько оцените его?', '');
+        lastWachhFilm = prompt('Один из последних фильмов?', '').trim();
+        gradeFilm = prompt('Насколько оцените его?', '').trim();
 
         if (numberOfFilm === null || lastWachhFilm === null || gradeFilm === null) {
             i--;
