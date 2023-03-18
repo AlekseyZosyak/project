@@ -51,17 +51,21 @@ const personalMuvieDB = {
         }
     },
     writeYourGenres: function() {
-    for (let i = 0; i <= 2; i++) {
-        personalMuvieDB.genres[i] = prompt(`ваш любимый жанр под номером : ${i + 1}.`);
-        if (personalMuvieDB.genres[i] == null || personalMuvieDB.genres[i] == '') {
-            i--;
+        for (let i = 0; i <= 2; i++) {
+            const genre = prompt(`ваш любимый жанр под номером : ${i + 1}.`).toLowerCase();
+
+            if(genre === '' || genre === null) {
+                console.log("Вы ввели не корректные данные!")
+                i--;
+            } else {
+                personalMuvieDB.genres[i] = genre;
+            }
         }
-    }
-    let index = 0;
-    let {genres} = personalMuvieDB;
-    genres.forEach(function (element) {
-        console.log(`${element} == ${element}`)
-    })
+
+        personalMuvieDB.genres.forEach( function(item, i) {
+            console.log(`Любимый жанр под номером ${i + 1} это: ${item}`);
+        })
+
     },
      toggleVisibleMyDB: function() {
         if(personalMuvieDB.privat) {
