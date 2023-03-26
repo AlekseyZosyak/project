@@ -1,4 +1,4 @@
-'user strict'
+'use strict'
 // const mass = {
 //     name: 'Alex Zosyak',
 //     old: 33,
@@ -138,3 +138,48 @@
 // }
 // console.log(availableCurr([...baseCurrencies, ...additionalCurrencies], 'CNY'));
 
+// let exp = 'ghjfghjfghjgfhj' ;
+// let expCounts = {};
+// let maxKey = '';
+
+// for(let i = 0; i < exp.length; i++)
+// {
+//     let key = exp[i];
+//     if(!expCounts[key]){
+//      expCounts[key] = 0;
+//     }
+//     expCounts[key]++;
+//     if(maxKey == '' || expCounts[key] > expCounts[maxKey]){
+//         maxKey = key;
+//     }
+// }
+
+// console.debug(maxKey + ":" + expCounts[maxKey]);
+
+// const add = 'dadadvdfvaffads';
+// const mass = {};
+// let mKey = '';
+
+// for (let i = 0; i < add.length; i++) {
+//     let key = add[i];
+//     if(!mass[key]) {
+//         mass[key] = 0;
+//     }
+//     mass[key]++;
+//     if(mKey == '' || mass[key] > mass[mKey]) {
+//         mKey = key;
+//     }
+// }
+// console.log(mass)
+// console.log(mKey)
+
+// let x = 2 && 1 && null & 0 && undefined;
+// console.log(x)
+// let y = !!(a && b);
+// let z = (a && b);
+// console.log(`${y}  -  ${z}`)
+
+
+var ob = {a:1, b:2, c: 4, c2: 4.5};
+var mas = Object.values(ob);
+console.log(mas)
